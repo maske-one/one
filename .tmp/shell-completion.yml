@@ -2,6 +2,7 @@ Configuration:
 - Debug
 - Release
 Continue: 
+GitHubPAT: 
 Help: 
 Host:
 - AppVeyor
@@ -19,13 +20,17 @@ Skip:
 - Clean
 - Compile
 - Publish
+- PushGhPages
 - Restore
+- Test
 Solution: 
 Target:
 - Clean
 - Compile
 - Publish
+- PushGhPages
 - Restore
+- Test
 Verbosity:
 - Minimal
 - Normal

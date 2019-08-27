@@ -3,13 +3,10 @@
     '_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
     '_framework/_bin/Microsoft.AspNetCore.Components.dll',
     '_framework/_bin/Microsoft.AspNetCore.Components.Browser.dll',
-
-
     '_framework/_bin/Microsoft.AspNetCore.Metadata.dll',
     '_framework/_bin/Microsoft.Bcl.AsyncInterfaces.dll',
     '_framework/_bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll',
     '_framework/_bin/Microsoft.Extensions.DependencyInjection.dll',
-
     '_framework/_bin/Microsoft.Extensions.Logging.Abstractions.dll',
     '_framework/_bin/Microsoft.Extensions.Options.dll',
     '_framework/_bin/Microsoft.Extensions.Primitives.dll',
@@ -32,19 +29,31 @@
     '_framework/blazor.boot.json',
     '_framework/blazor.server.js',
     '_framework/blazor.webassembly.js',
+    '_framework/_bin/one.dll',
 
-    '_framework/_bin/GradeView.dll',
-    'css/bootstrap/bootstrap.min.css',
-    'css/open-iconic/font/css/open-iconic-bootstrap.min.css',
-    'css/site.css',
-    '/favicon.ico',
-    '/icons/icon-192-192.png',
-    '/icons/icon-512-512.png',
-    'index.html',
+    '/assets/favicon.ico',
+    '/assets/android-chrome-192x192.png',
+    '/assets/android-chrome-512x512.png',
+    '/assets/apple-touch-icon.png',
+    '/assets/Bot.exe',
+    '/assets/favicon.ico',
+    '/assets/favicon-16x16.png',
+    '/assets/favicon-32x32.png',
+    '/assets/loading.css',
+    '/assets/logo.svg',
+    '/assets/manifest.json',
+    '/assets/mstile-150x150.png',
+    '/assets/Plan_2A.svg',
+    '/assets/safari-pinned-tab.svg',
+    '/assets/styles.css',
 
+    '404.html',
+    'blazorServiceWorker.js',
     'blazorSWRegister.js',
+    'CNAME',
+    'index.html',
+    'nojekyll',
 
-    'manifest.json'
 ];
 
 const staticCacheName = 'blazor-cache-v3';
