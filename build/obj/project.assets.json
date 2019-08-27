@@ -7132,23 +7132,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maske\\.nuget\\packages\\": {},
+    "C:\\Users\\saven\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\one\\build\\_build.csproj",
+      "projectUniqueName": "C:\\Users\\saven\\Desktop\\Maske_one\\gh-pages\\one\\build\\_build.csproj",
       "projectName": "_build",
-      "projectPath": "C:\\git\\one\\build\\_build.csproj",
-      "packagesPath": "C:\\Users\\maske\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\one\\build\\obj\\",
+      "projectPath": "C:\\Users\\saven\\Desktop\\Maske_one\\gh-pages\\one\\build\\_build.csproj",
+      "packagesPath": "C:\\Users\\saven\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\saven\\Desktop\\Maske_one\\gh-pages\\one\\build\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\maske\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\saven\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7196,7 +7196,8 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview8-013656\\RuntimeIdentifierGraph.json"
       }
     }
   }
