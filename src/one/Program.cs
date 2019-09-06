@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Blazor.Hosting;
+﻿using Microsoft.AspNetCore.Blazor.Hosting;
 
 namespace one
 {

@@ -9,7 +9,6 @@ namespace one
         {
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IComponentsApplicationBuilder app)
         {
             app.AddComponent<App>("app");

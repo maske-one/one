@@ -567,7 +567,7 @@
           "lib/netstandard1.6/NuGet.Versioning.dll": {}
         }
       },
-      "Nuke.Common/0.21.2": {
+      "Nuke.Common/0.22.0-alpha0048": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "6.0.2",
@@ -3073,10 +3073,10 @@
         "nuget.versioning.nuspec"
       ]
     },
-    "Nuke.Common/0.21.2": {
-      "sha512": "JGFvaf498bI2P6uEGgr1DVBg7abNlhDs32cZESkHXJuxdDonQiNwARl6LFY1b51EEDvspifUQ+mxU2ieZMdBtw==",
+    "Nuke.Common/0.22.0-alpha0048": {
+      "sha512": "xt7EdjJWI7M2Tw07C4gNc+X2ROyHBZjQElbIWKFjIADn3GbhrM5yRARzwZm81+Aolk/71T0YPa2TQGVQtDxpjQ==",
       "type": "package",
-      "path": "nuke.common/0.21.2",
+      "path": "nuke.common/0.22.0-alpha0048",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3172,7 +3172,7 @@
         "lib/net461/Nuke.Common.xml",
         "lib/netstandard2.0/Nuke.Common.dll",
         "lib/netstandard2.0/Nuke.Common.xml",
-        "nuke.common.0.21.2.nupkg.sha512",
+        "nuke.common.0.22.0-alpha0048.nupkg.sha512",
         "nuke.common.nuspec"
       ]
     },
@@ -7128,7 +7128,7 @@
     ".NETCoreApp,Version=v2.0": [
       "GitVersion.CommandLine.DotNetCore >= 4.0.1-beta1-49",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Nuke.Common >= 0.21.2"
+      "Nuke.Common >= 0.22.0-alpha0048"
     ]
   },
   "packageFolders": {
@@ -7184,7 +7184,7 @@
           },
           "Nuke.Common": {
             "target": "Package",
-            "version": "[0.21.2, )"
+            "version": "[0.22.0-alpha0048, )"
           }
         },
         "imports": [

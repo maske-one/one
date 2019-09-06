@@ -1,8 +1,3 @@
-.header {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
 .logo {
   position: absolute;
   top: 25%;
@@ -24,4 +19,5 @@
   }
 }
 .logo {
-  animation: hideshow 3s ease infinite, rotation 1s ease  infinite;
+    animation: hideshow 3s ease infinite, rotation 1s ease infinite;
+}

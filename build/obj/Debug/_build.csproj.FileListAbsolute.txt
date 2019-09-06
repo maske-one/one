@@ -1,14 +1,3 @@
-C:\git\one\build\obj\Debug\_build.csprojAssemblyReference.cache
-C:\git\one\build\obj\Debug\_build.csproj.CoreCompileInputs.cache
-C:\git\one\build\obj\Debug\_build.AssemblyInfoInputs.cache
-C:\git\one\build\obj\Debug\_build.AssemblyInfo.cs
-C:\git\one\build\bin\Debug\_build.deps.json
-C:\git\one\build\bin\Debug\_build.runtimeconfig.json
-C:\git\one\build\bin\Debug\_build.runtimeconfig.dev.json
-C:\git\one\build\bin\Debug\_build.dll
-C:\git\one\build\bin\Debug\_build.pdb
-C:\git\one\build\obj\Debug\_build.dll
-C:\git\one\build\obj\Debug\_build.pdb
 C:\Users\saven\Desktop\Maske_one\gh-pages\one\build\bin\Debug\_build.deps.json
 C:\Users\saven\Desktop\Maske_one\gh-pages\one\build\bin\Debug\_build.runtimeconfig.json
 C:\Users\saven\Desktop\Maske_one\gh-pages\one\build\bin\Debug\_build.runtimeconfig.dev.json

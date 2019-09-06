@@ -16,49 +16,43 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\404.html">
+    <Content Update="wwwroot\assets\project_files\android-chrome-192x192.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\android-chrome-192x192.png">
+    <Content Update="wwwroot\assets\project_files\android-chrome-512x512.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\android-chrome-512x512.png">
+    <Content Update="wwwroot\assets\project_files\apple-touch-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\apple-touch-icon.png">
+    <Content Update="wwwroot\assets\project_files\favicon-16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\favicon-16x16.png">
+    <Content Update="wwwroot\assets\project_files\favicon-32x32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\favicon-32x32.png">
+    <Content Update="wwwroot\assets\project_files\favicon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\favicon.ico">
+    <Content Update="wwwroot\assets\project_files\loading.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\loading.css">
+    <Content Update="wwwroot\assets\project_files\logo.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\logo.svg">
+    <Content Update="wwwroot\manifest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\manifest.json">
+    <Content Update="wwwroot\assets\project_files\mstile-150x150.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\mstile-150x150.png">
+    <Content Update="wwwroot\assets\project_files\safari-pinned-tab.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\safari-pinned-tab.svg">
+    <Content Update="wwwroot\assets\project_files\styling.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\styles.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\blazorServiceWorker.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\blazorSWRegister.js">
+    <Content Update="wwwroot\serviceWorker.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\CNAME">
@@ -67,7 +61,7 @@
     <Content Update="wwwroot\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\nojekyll">
+    <Content Update="wwwroot\_config.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

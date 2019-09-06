@@ -24,7 +24,7 @@ class Build : NukeBuild
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
 
-    public static int Main() => Execute<Build>(x => x.PushGhPages);
+    public static int Main () => Execute<Build>(x => x.PushGhPages);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -32,7 +32,7 @@ class Build : NukeBuild
     [Solution] readonly Solution Solution;
     [GitRepository] readonly GitRepository GitRepository;
     [GitVersion] readonly GitVersion GitVersion;
-    [Parameter] string GitHubPAT;
+    [Parameter] string PAT;
 
     AbsolutePath SourceDirectory => RootDirectory / "src";
     AbsolutePath TestsDirectory => RootDirectory / "tests";
@@ -45,7 +45,7 @@ class Build : NukeBuild
         .Executes(() =>
         {
             SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-            //TestsDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
+            TestsDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
             EnsureCleanDirectory(TestsDirectory);
             EnsureCleanDirectory(PublishDirectory);
             EnsureCleanDirectory(OutputDirectory);
@@ -84,34 +84,29 @@ class Build : NukeBuild
         .Executes(() =>
         {
             DotNetPublish(s => s
-               .SetConfiguration("Release")
-               .SetOutput(PublishDirectory)
-               //.SetAssemblyVersion(GitVersion.GetNormalizedAssemblyVersion())
-               //.SetAssemblyVersion(GitVersion.FullSemVer.Replace("+","."))
-               .SetAssemblyVersion(GetAssemblyVersion())
-               .SetFileVersion(GitVersion.GetNormalizedFileVersion())
-               .SetInformationalVersion(GitVersion.InformationalVersion)
-            //.SetNoBuild(true)
+                    .SetConfiguration("Release")
+                    .SetOutput(PublishDirectory)
+                    .SetAssemblyVersion(GetAssemblyVersion())
+                    .SetFileVersion(GitVersion.GetNormalizedFileVersion())
+                    .SetInformationalVersion(GitVersion.InformationalVersion)
             );
         });
 
-
     public string GetAssemblyVersion()
     {
-        var main = "0";
         var stamp = DateTime.Now;
         var month = (stamp.Year - 2000) * 100 + stamp.Month;
         var day = stamp.Day;
         var rev = GitVersion.BuildMetaData;
 
-        return $"{main}.{month}.{day}.{rev}";
+        return $"{month}.{day}.{rev}";
     }
 
     Target PushGhPages => _ => _
         .DependsOn(Publish)
         .Executes(() =>
         {
-            if (GitHubPAT == null)
+            if (PAT == null)
             {
                 GitTasks.Git("init", DistributionDirectory);
                 GitTasks.Git("checkout -b gh-pages", DistributionDirectory);
@@ -127,9 +122,8 @@ class Build : NukeBuild
                 GitTasks.Git("checkout -b gh-pages", DistributionDirectory);
                 GitTasks.Git("add -A", DistributionDirectory);
                 GitTasks.Git($"commit -m \"commit ver {GitVersion.FullSemVer}\"", DistributionDirectory);
-                GitTasks.Git($"push -f  https://{GitHubPAT}@github.com/maske-one/one.git gh-pages", DistributionDirectory);
+                GitTasks.Git($"push -f  https://{PAT}@github.com/maske-one/one.git gh-pages", DistributionDirectory);
 
             }
         });
-
 }

@@ -2,18 +2,18 @@ Configuration:
 - Debug
 - Release
 Continue: 
-GitHubPAT: 
 Help: 
 Host:
 - AppVeyor
+- AzureDevOps
 - Bitrise
 - Console
 - GitLab
 - Jenkins
 - TeamCity
-- TeamServices
 - Travis
 NoLogo: 
+PAT: 
 Plan: 
 Root: 
 Skip:
@@ -23,7 +23,6 @@ Skip:
 - PushGhPages
 - Restore
 - Test
-Solution: 
 Target:
 - Clean
 - Compile

@@ -9,7 +9,7 @@
       "_build/1.0.0": {
         "dependencies": {
           "GitVersion.CommandLine.DotNetCore": "4.0.1-beta1-49",
-          "Nuke.Common": "0.21.2"
+          "Nuke.Common": "0.22.0-alpha0048"
         },
         "runtime": {
           "_build.dll": {}
@@ -315,7 +315,7 @@
           }
         }
       },
-      "Nuke.Common/0.21.2": {
+      "Nuke.Common/0.22.0-alpha0048": {
         "dependencies": {
           "AutoMapper": "6.0.2",
           "Colorful.Console": "1.2.9",
@@ -336,8 +336,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Nuke.Common.dll": {
-            "assemblyVersion": "0.21.0.0",
-            "fileVersion": "0.21.2.0"
+            "assemblyVersion": "0.22.0.0",
+            "fileVersion": "0.22.0.0"
           }
         }
       },
@@ -1354,12 +1354,12 @@
       "path": "nuget.versioning/4.9.2",
       "hashPath": "nuget.versioning.4.9.2.nupkg.sha512"
     },
-    "Nuke.Common/0.21.2": {
+    "Nuke.Common/0.22.0-alpha0048": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JGFvaf498bI2P6uEGgr1DVBg7abNlhDs32cZESkHXJuxdDonQiNwARl6LFY1b51EEDvspifUQ+mxU2ieZMdBtw==",
-      "path": "nuke.common/0.21.2",
-      "hashPath": "nuke.common.0.21.2.nupkg.sha512"
+      "sha512": "sha512-xt7EdjJWI7M2Tw07C4gNc+X2ROyHBZjQElbIWKFjIADn3GbhrM5yRARzwZm81+Aolk/71T0YPa2TQGVQtDxpjQ==",
+      "path": "nuke.common/0.22.0-alpha0048",
+      "hashPath": "nuke.common.0.22.0-alpha0048.nupkg.sha512"
     },
     "Refit/4.0.0": {
       "type": "package",

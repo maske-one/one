@@ -1,15 +1,20 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+<header>
+    <img class='logo' src='assets/project_files/logo.svg'>
+    <input type='checkbox' id='nav-toggle' class='nav-toggle'>
+    <nav>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/plan'>Stundenplan</a></li>
+            <li><a href='/bot'>Nrj air Bot</a></li>
+        </ul>
+    </nav>
+    <label for='nav-toggle' class='nav-toggle-label'>
+        <span></span>
+    </label>
+</header>
 
-<div class="main">
-    <div class='header'>
-        <img class='logo' src='assets/logo.svg'>
-    </div>
-
-    <div class="content px-4">
-        @Body
-    </div>
+<div class='content'>
+    @Body
 </div>
