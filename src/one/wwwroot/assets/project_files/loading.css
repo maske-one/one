@@ -21,3 +21,12 @@
 .logo {
     animation: hideshow 3s ease infinite, rotation 1s ease infinite;
 }
+
+@keyframes bgcircle {
+  0% { radial-gradient(circle, white, rgba(0,142,255,0.7)); }
+  100% { radial-gradient(circle, rgba(0,142,255,0.7), white); }
+}
+
+body {
+  animation: bgcircle 3s ease infinite;
+}
