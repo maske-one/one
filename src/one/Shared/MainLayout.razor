@@ -6,10 +6,10 @@
     <input type='checkbox' id='nav-toggle' class='nav-toggle'>
     <nav>
         <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/plan'>Stundenplan</a></li>
-            <li><a href='/deckel'>Deckel Rechner</a></li>
-            <li><a href='/bot'>Nrj air Bot</a></li>
+            <li><a href='/' @onclick="unchecknav">Home</a></li>
+            <li><a href='/plan' @onclick="unchecknav">Stundenplan</a></li>
+            <li><a href='/deckel' @onclick="unchecknav">Deckel Rechner</a></li>
+            <li><a href='/bot' @onclick="unchecknav">Nrj air Bot</a></li>
         </ul>
     </nav>
     <label for='nav-toggle' class='nav-toggle-label'>
@@ -29,5 +29,10 @@
         {
             JsRuntime.InvokeAsync<object>("changeStyle");
         }
+    }
+
+    void unchecknav()
+    {
+        JsRuntime.InvokeAsync<object>("unchecknav");
     }
 }

@@ -1,11 +1,13 @@
 ﻿const cache_files = [
     /* Runtime Files */
     "_framework/_bin/one.dll",
+
     "_framework/_bin/Microsoft.AspNetCore.Authorization.dll",
     "_framework/_bin/Microsoft.AspNetCore.Blazor.dll",
     "_framework/_bin/Microsoft.AspNetCore.Blazor.HttpClient.dll",
     "_framework/_bin/Microsoft.AspNetCore.Components.dll",
     "_framework/_bin/Microsoft.AspNetCore.Components.Web.dll",
+    "_framework/_bin/Microsoft.AspNetCore.Components.Forms.dll",
     "_framework/_bin/Microsoft.AspNetCore.Metadata.dll",
     "_framework/_bin/Microsoft.Bcl.AsyncInterfaces.dll",
     "_framework/_bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
@@ -16,7 +18,6 @@
     "_framework/_bin/Microsoft.JSInterop.dll",
     "_framework/_bin/Mono.Security.dll",
     "_framework/_bin/Mono.WebAssembly.Interop.dll",
-    "_framework/_bin/mscorlib.dll",
     "_framework/_bin/System.Buffers.dll",
     "_framework/_bin/System.ComponentModel.Annotations.dll",
     "_framework/_bin/System.Core.dll",
