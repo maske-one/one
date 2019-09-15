@@ -1,0 +1,33 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JsRuntime
+
+<header>
+    <img class='logo' src='assets/project_files/logo.svg'>
+    <input type='checkbox' id='nav-toggle' class='nav-toggle'>
+    <nav>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/plan'>Stundenplan</a></li>
+            <li><a href='/deckel'>Deckel Rechner</a></li>
+            <li><a href='/bot'>Nrj air Bot</a></li>
+        </ul>
+    </nav>
+    <label for='nav-toggle' class='nav-toggle-label'>
+        <span></span>
+    </label>
+</header>
+
+<div class='content'>
+    @Body
+</div>
+
+@code {
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            JsRuntime.InvokeAsync<object>("changeStyle");
+        }
+    }
+}

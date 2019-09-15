@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="assets/project_files/loading.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/project_files/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/project_files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/project_files/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="assets/project_files/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/project_files/favicon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-title" content="Maske one">
+    <meta name="application-name" content="Maske one">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+	
+	<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('serviceWorker.js') }</script>
+    <meta name="google-site-verification" content="pLEp2OGEddTJMwkBwmo-yS3RusexqBokhqim6VYO3EI" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145492068-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-145492068-1');
+        function changeStyle() { document.querySelector("head > link:nth-child(1)").outerHTML = '<link rel="stylesheet" href="assets/project_files/styling.css">'; }
+    </script>
+    <noscript><link rel="stylesheet" href="assets/project_files/styling.css"></noscript>
+</head>
+<body oncontextmenu="return false;">
+    <app><img class='logo' src='assets/project_files/logo.svg'></app>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>
