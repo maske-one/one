@@ -1,0 +1,84 @@
+﻿@page "/meteo"
+@using System.Web
+
+<div class="inputs">
+    <p>Relative Luftfeuchtigkeit bekannt? <input type="checkbox" @bind="@isRL" /></p>
+    <p>Luftdruck bekannt? <input type="checkbox" @bind="@Pgiv" /></p>
+    
+    @if (isRL)
+    {
+        <p>Relative Luftfeuchtigkeit [%]: <input @bind="R" /></p>
+    }
+    else
+    {
+        <p>Absolute Luftfeuchtigkeit [g/cm3]: <input @bind="A" /></p>
+    }
+    <p>Höhe über Meer [m]: <input @bind="h" /></p>
+    <p>Temperatur [°C]: <input @bind="t" /></p>
+    <p>Breitengrad [°]: <input @bind="b" /></p>
+    @if (Pgiv)
+    {<p>Luftdruck [hPa]: <input @bind="P" /></p>}
+    <button @onclick="@Calc">Berechnen</button>
+</div>
+<div class="solutions">
+    @if (!isRL)
+    {<h3>Relative Luftfeuchtigkeit: @R %</h3>}
+    <h3>Taupunkt: @td °C</h3>
+    <h3>Wolken auf: @H m</h3>
+</div>
+
+
+
+@code
+{
+    bool isRL { get; set; }
+    bool Pgiv { get; set; }
+    double R { get; set; }
+    double A { get; set; }
+    double h { get; set; }
+    double t { get; set; }
+    double b { get; set; }
+    double P { get; set; }
+    double td { get; set; }
+    double H { get; set; }
+
+
+    void Calc()
+    {
+        double T = 273.15 + t;
+        double S = 6.112 * Math.Exp(2.453 * Math.Pow(10, 6) * (1 / 273.15 - 1 / T) / 461.4);
+        double p = 100000 * S / (461.5 * T);
+        double Lb = 2.501 * Math.Pow(10, 6);
+        double c = 238.88;
+        double a = 17.368;
+        if (!isRL)
+        {
+            R = A / p;
+        }
+        else
+        {
+            R = R/100;
+        }
+        if (!Pgiv)
+        {
+            P = 1013.25 * Math.Exp(-5 * h * Math.Pow(10, -4) / (4 * (1 + 0.003665 * t) * (1 + 0.764 * S / h) * (1 + 0.002665 * Math.Cos(2 * Math.PI * b / 180)) * (1 + h / 6371000)));
+        }
+        double g = 6.67408 * Math.Pow(10, 13) * 5.972 / (Math.Pow((6371000 / (1 + 0.002665 * Math.Cos(2 * Math.PI * b / 180)) + h), 2));
+        double rv = 0.6621 * S / (P - S);
+        if (t < 0)
+        {
+            Lb = 2.834 * Math.Pow(10, 6);
+        }
+        double L = g * (1 + rv) * (1 + Lb * rv / (287 * T)) / (1005.7 + 719 * rv + (Lb * Lb * rv * (rv + 0.6221)) / (461.5 * T * T));
+        if (t < 0)
+        {
+            c = 247.15;
+            a = 17.966;
+        }
+        td = c * (Math.Log(R) + a * t / (c + t)) / (a - Math.Log(R) - a * t / (c + t));
+        H = (t - td) / L + h;
+        R = Math.Round(100*R, 2);
+        td = Math.Round(td, 2);
+        H = Math.Round(H, 2);
+    }
+}

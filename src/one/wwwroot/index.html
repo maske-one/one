@@ -16,7 +16,7 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
 	
-	<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('serviceWorker.js') }</script>
+	<script>if ('serviceWorker' in navigator) { window.onload = function() { navigator.serviceWorker.register('serviceWorker.js'); }; }</script>
     <meta name="google-site-verification" content="pLEp2OGEddTJMwkBwmo-yS3RusexqBokhqim6VYO3EI" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145492068-1"></script>

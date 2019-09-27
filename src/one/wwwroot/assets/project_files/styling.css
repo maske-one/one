@@ -148,5 +148,22 @@ nav a:hover {
 /* Page Specific Styling */
 
 input {
-    width: 4em;
+    width: 5em;
+}
+
+.inputs {
+    position: relative;
+    text-align: left;
+}
+
+.solutions {
+    height: auto;
+    text-align: left;
+}
+
+.helpcheck {
+    display: none;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
