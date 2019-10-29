@@ -4,16 +4,16 @@
 <div class="inputs">
     <p>Wind in m/s: <input @bind="V" /></p>
     <p>Wassertiefe [m]: <input @bind="T" /></p>
-    <p>Windlaufstrecke [m]: <input @bind="L" /><input class="helpcheck" id="help" type="checkbox" @bind="@help" /><label for="help">?</label></p>
+    <p>Windlaufstrecke [m]: <input @bind="L" /><input class="helpcheck" id="help" type="checkbox" @bind="help" /><label for="help">?</label></p>
     @if (help)
     {<p>Die Strecke die der Wind übers Wasser weht</p>}
-    <p>Breitengrad bekannt? <input type="checkbox" @bind="@bgiv" /></p>
+    <p>Breitengrad bekannt? <input type="checkbox" @bind="bgiv" /></p>
     @if (bgiv)
     {<p>Breitengrad: <input @bind="b" /></p>}
-    <p>Höhe bekannt? <input type="checkbox" @bind="@hgiv" /></p>
+    <p>Höhe bekannt? <input type="checkbox" @bind="hgiv" /></p>
     @if (hgiv)
     {<p>Höhe: <input @bind="H" /></p>}
-    <button @onclick="@Calc">Berechnen</button>
+    <button @onclick="Calc">Berechnen</button>
 </div>
 <div class="solutions">
     <h4>Durchschnittshöhe: @(r(ho)) m</h4>

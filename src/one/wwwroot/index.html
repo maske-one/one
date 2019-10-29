@@ -1,16 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link rel="hold1">
-    <link rel="hold2">
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PZZ2D8G');</script>
-    <!-- End Google Tag Manager -->
-
+    <script src="assets/core/gtag.js"></script>
+    <link rel="stylesheet" href="assets/core/styling.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/core/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/core/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/core/favicon-16x16.png">
@@ -23,24 +15,12 @@
     <meta name="application-name" content="Maske one">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
-	
-    <script>
-        
-        document.querySelector("head > link:nth-child(1)").outerHTML =
-            '<link rel="stylesheet" href="assets/core/loading.css';
-        document.querySelector("head > link:nth-child(2)").outerHTML =
-            '<link rel="stylesheet" href="assets/core/styling.css">';
-        function changeStyle() { document.querySelector("head > link:nth-child(1)").outerHTML = ''; }
-        function unchecknav() { document.getElementById("nav-toggle").checked = false; }
-    </script>
-    <noscript><link rel="stylesheet" href="assets/core/styling.css"></noscript>
+
+    <script src="assets/core/functions.js"></script>
 </head>
-<body oncontextmenu="return false;">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZZ2D8G" 
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <app><img class='logo' src='assets/core/logo.svg'></app>
-    <script src="_framework/blazor.webassembly.js"></script>
+        <body oncontextmenu="return false;" id="bod">
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZZ2D8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <app><img class='logo' src='assets/core/logo.svg'></app>
+        <script src="_framework/blazor.webassembly.js"></script>
 </body>
 </html>

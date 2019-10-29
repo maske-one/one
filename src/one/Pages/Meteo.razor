@@ -2,8 +2,8 @@
 @using System.Web
 
 <div class="inputs">
-    <p>Relative Luftfeuchtigkeit bekannt? <input type="checkbox" @bind="@isRL" /></p>
-    <p>Luftdruck bekannt? <input type="checkbox" @bind="@Pgiv" /></p>
+    <p>Relative Luftfeuchtigkeit bekannt? <input type="checkbox" @bind="isRL" /></p>
+    <p>Luftdruck bekannt? <input type="checkbox" @bind="Pgiv" /></p>
     
     @if (isRL)
     {
@@ -18,7 +18,7 @@
     <p>Breitengrad [°]: <input @bind="b" /></p>
     @if (Pgiv)
     {<p>Luftdruck [hPa]: <input @bind="P" /></p>}
-    <button @onclick="@Calc">Berechnen</button>
+    <button @onclick="Calc">Berechnen</button>
 </div>
 <div class="solutions">
     @if (!isRL)

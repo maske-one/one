@@ -1,13 +1,13 @@
 ﻿@inherits LayoutComponentBase
 @inject IJSRuntime JsRuntime
 
-<header>
-    <img class='logo' src='assets/project_files/logo.svg'>
+<header id="heady">
+    <img class='logo' id="load" src='assets/core/logo.svg'>
+    <img class='logo_full' id="full" src='assets/core/maske.svg'>
     <input type='checkbox' id='nav-toggle' class='nav-toggle'>
-    <nav>
+    <nav id="navy">
         <ul>
         <li><a href='/' @onclick="unchecknav">Home</a></li>
-        <li><a href='/plan' @onclick="unchecknav">Stundenplan</a></li>
         <li><a href='/meteo' @onclick="unchecknav">Meteo</a></li>
         <li><a href='/promille' @onclick="unchecknav">Promille</a></li>
         <li><a href='/wellen' @onclick="unchecknav">Wellen</a></li>
@@ -36,4 +36,5 @@
     {
         JsRuntime.InvokeAsync<object>("unchecknav");
     }
+
 }

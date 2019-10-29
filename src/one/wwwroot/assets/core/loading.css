@@ -1,9 +1,9 @@
 .logo {
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  top: 40vh;
+  left: 40vw;
+  width: 20vw;
+  height: 20vh;
 }
 @keyframes hideshow {
   0% { opacity: 0; }
@@ -21,16 +21,3 @@
 .logo {
     animation: hideshow 3s ease infinite, rotation 1s ease infinite;
 }
-/*
-@keyframes bgcircle {
-    0% { background: radial-gradient(circle, white, rgba(0,142,255,1)); }
-    25% { background: radial-gradient(circle, white, rgba(0,142,255,0.5)); }
-    50% { background: white; }
-    75% { background: radial-gradient(circle, rgba(0, 142, 255, 0.5), white); }
-    100% { background: radial-gradient(circle, rgba(0, 142, 255, 1), white); }
-    }
-}
-
-body {
-  animation: bgcircle 3s ease infinite;
-}*/
