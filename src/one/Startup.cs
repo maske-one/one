@@ -7,6 +7,7 @@ namespace one
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddProgressiveWebApp();
         }
 
         public void Configure(IComponentsApplicationBuilder app)

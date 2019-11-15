@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<script>
+function KarteLaden() {
+    if (document.getElementById("karte")) {
+        var siz = Math.round(window.screen.height / 20);
+        var sacks = [
+            [{ lat: 47.435091, lng: 7.536158 }, "Sack 1 \n 1/4"],
+            [{ lat: 47.401437, lng: 7.462901 }, "Sack 2 \n 3/4"]
+        ];
+        var karte = new google.maps.Map(document.getElementById("karte"),
+            { zoom: 14, center: { lat: 47.438479, lng: 7.547535 }, mapTypeId: "hybrid" });
+        sacks.forEach(function(sack) {
+            var sackmarker = new google.maps.Marker({
+                position: sack[0],
+                label: sack[1],
+                icon:
+                {
+                    url: "sack-ico.svg",
+                    size: new google.maps.Size(siz, siz),
+                    scaledSize: new google.maps.Size(siz, siz)
+                },
+                map: karte
+            });
+        });
+    }
+}
+</script>
+<script defer async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-hoEaszKvwXMw_GjDEX8Q9JHrmS53T8&callback=KarteLaden"></script>
+</head>
+<body>
+	<div id="karte"></div>
+	<style>
+		#karte {
+			height: 91vh;
+			width: 95vw;
+		}
+	</style>
+</body>

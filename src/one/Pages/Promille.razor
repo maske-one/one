@@ -1,34 +1,23 @@
 ﻿@page "/promille"
+@using one.Shared
 
-<div class="inputs">
-    <p><div class="entry">Alter: </div><input @bind="J" /></p>
-    <p><div class="entry">Grösse [cm]: </div><input @bind="H" /></p>
-    <p><div class="entry">Gewicht: </div><input @bind="G" /></p>
-    <p><div class="entry">Deziliter getrunken: </div><input @bind="D" /></p>
-    <p><div class="entry">Alkohol im Getrunkenen [%]: </div><input @bind="P" /></p>
-    <button @onclick="Calc">Berechnen</button>
-</div>
-<div class="solutions">
-    <h3>Promille: @p</h3>
-</div>
-
+Weiblich? <input type="checkbox" />
+Alter: <input @bind="@calculation.Age" />
+Grösse [cm]: <input @bind="@calculation.Height" />
+Gewicht: <input @bind="@calculation.Weight" />
+Deziliter getrunken: <input @bind="@calculation.Deciliter" />
+Volumenprozent: <input @bind="@calculation.Percent" />
+Saettigung (0 bis 3): <input @bind="@calculation.Fullness" />
+<button @onclick="OnCalculate">Berechnen</button>
+<h3>Promille Alkohol: </h3>
 
 
 @code
 {
-    double J { get; set; }
-    double H { get; set; }
-    double G { get; set; }
-    double D { get; set; }
-    double P { get; set; }
-    double p { get; set; }
+    AlcoholBloodConcentrationCalculation calculation = new AlcoholBloodConcentrationCalculation(Genders.Male, 0,0,0,0,0,0);
 
-
-    void Calc()
+    public void OnCalculate()
     {
-        double c = 2.447 - 0.09516 * J + 0.1074 * H + 0.3362 * G;
-        double g = 0.7893 * P * D;
-        p = 0.76 * g / c;
-        p = Math.Round(p, 2);
+        
     }
 }
