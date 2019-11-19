@@ -14,7 +14,7 @@
           "lib/netcoreapp2.0/FluentAssertions.dll": {}
         }
       },
-      "Microsoft.CodeCoverage/16.3.0": {
+      "Microsoft.CodeCoverage/16.5.0-preview-20191115-01": {
         "type": "package",
         "compile": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
@@ -54,15 +54,15 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.NET.Test.Sdk/16.3.0": {
+      "Microsoft.NET.Test.Sdk/16.5.0-preview-20191115-01": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeCoverage": "16.3.0",
-          "Microsoft.TestPlatform.TestHost": "16.3.0"
+          "Microsoft.CodeCoverage": "16.5.0-preview-20191115-01",
+          "Microsoft.TestPlatform.TestHost": "16.5.0-preview-20191115-01"
         },
         "build": {
-          "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.props": {},
-          "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.targets": {}
+          "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props": {},
+          "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets": {}
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
@@ -86,7 +86,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/16.3.0": {
+      "Microsoft.TestPlatform.ObjectModel/16.5.0-preview-20191115-01": {
         "type": "package",
         "dependencies": {
           "NuGet.Frameworks": "5.0.0"
@@ -182,10 +182,10 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/16.3.0": {
+      "Microsoft.TestPlatform.TestHost/16.5.0-preview-20191115-01": {
         "type": "package",
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "16.3.0",
+          "Microsoft.TestPlatform.ObjectModel": "16.5.0-preview-20191115-01",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
@@ -1710,10 +1710,10 @@
         "lib/netstandard2.0/FluentAssertions.xml"
       ]
     },
-    "Microsoft.CodeCoverage/16.3.0": {
-      "sha512": "CVEzOQp+2Y/VdUEbvtziOd41QJ3tGGvqI14to5blM0Glr4P9uasORK4SaSF4bvlRQaiMeqS2iGoCfVIggdymmw==",
+    "Microsoft.CodeCoverage/16.5.0-preview-20191115-01": {
+      "sha512": "x5ZQ3T+eeCb4uwGWUEck060o01aTkPeWJRVKZrOr2Qma0QDNe5ux7a+SwuhNKrLUnAn3airf+Ka5d+xy4vZ/0g==",
       "type": "package",
-      "path": "microsoft.codecoverage/16.3.0",
+      "path": "microsoft.codecoverage/16.5.0-preview-20191115-01",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1742,7 +1742,7 @@
         "build/netstandard1.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
         "lib/net45/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
-        "microsoft.codecoverage.16.3.0.nupkg.sha512",
+        "microsoft.codecoverage.16.5.0-preview-20191115-01.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
     },
@@ -1804,23 +1804,23 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.NET.Test.Sdk/16.3.0": {
-      "sha512": "Drk/adJoZYuMx3MuhcpEqfXDrAOwv56tjq9SlqeO20+oTlNfGEebw2dmMRTl17EwlUYctdmZv5VzTZVncU1aVw==",
+    "Microsoft.NET.Test.Sdk/16.5.0-preview-20191115-01": {
+      "sha512": "v7zBisw6TSgURBUTzmi1OxCPgmFaHkby/5pkhZdKPPGVVjUfRaPxv8XCc+Sl3ruDt/poshO34lylyXnvse9fSA==",
       "type": "package",
-      "path": "microsoft.net.test.sdk/16.3.0",
+      "path": "microsoft.net.test.sdk/16.5.0-preview-20191115-01",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/net40/Microsoft.NET.Test.Sdk.props",
         "build/net40/Microsoft.NET.Test.Sdk.targets",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.cs",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.fs",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.vb",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.props",
-        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.targets",
+        "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.Program.cs",
+        "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.Program.fs",
+        "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.Program.vb",
+        "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props",
+        "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets",
         "build/uap10.0/Microsoft.NET.Test.Sdk.props",
         "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
-        "microsoft.net.test.sdk.16.3.0.nupkg.sha512",
+        "microsoft.net.test.sdk.16.5.0-preview-20191115-01.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
       ]
     },
@@ -1854,10 +1854,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.TestPlatform.ObjectModel/16.3.0": {
-      "sha512": "F4ZZ1c6J6VqeFhfPPBZNk+jr7VU5qYgxoClWK+VOJMRwGYc5edYY5q9CGtNgT93VcVGQ/ie6Gn8J9HDoST1fAg==",
+    "Microsoft.TestPlatform.ObjectModel/16.5.0-preview-20191115-01": {
+      "sha512": "QHFJJBwpbKSwNiFu0n5nm5BIYdJUF8MkAtd5HRSDCeLmxqIr+Jt9KDs5fyNDAe0JGTqOJO6rZhWcejLTvHH4pQ==",
       "type": "package",
-      "path": "microsoft.testplatform.objectmodel/16.3.0",
+      "path": "microsoft.testplatform.objectmodel/16.5.0-preview-20191115-01",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1919,14 +1919,14 @@
         "lib/netstandard2.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "microsoft.testplatform.objectmodel.16.3.0.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.16.5.0-preview-20191115-01.nupkg.sha512",
         "microsoft.testplatform.objectmodel.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.TestHost/16.3.0": {
-      "sha512": "N44oK5yrJw70tJh/f5XrDT9ibywsz/t9hm9f59DojtfJphYG55oXf/2ht9h0iNMyzpuh7lFAWPdRcZ9v0Oj82w==",
+    "Microsoft.TestPlatform.TestHost/16.5.0-preview-20191115-01": {
+      "sha512": "vLkec8oxg6LcdtVuLVojSm0E3HcW+t65vNxcZpBCuZWBPXIndkkbQx0I5hF2jGYc8e9CzFY7fal1G0CO3tpRcQ==",
       "type": "package",
-      "path": "microsoft.testplatform.testhost/16.3.0",
+      "path": "microsoft.testplatform.testhost/16.5.0-preview-20191115-01",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2071,7 +2071,7 @@
         "lib/uap10.0/Microsoft.TestPlatform.Utilities.dll",
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.Common.dll",
         "lib/uap10.0/testhost.dll",
-        "microsoft.testplatform.testhost.16.3.0.nupkg.sha512",
+        "microsoft.testplatform.testhost.16.5.0-preview-20191115-01.nupkg.sha512",
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
@@ -5751,28 +5751,28 @@
       "FluentAssertions >= 5.9.0",
       "MSTest.TestAdapter >= 2.0.0",
       "MSTest.TestFramework >= 2.0.0",
-      "Microsoft.NET.Test.Sdk >= 16.3.0",
+      "Microsoft.NET.Test.Sdk >= 16.5.0-preview-20191115-01",
       "one.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saven\\.nuget\\packages\\": {},
+    "C:\\Users\\maske\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saven\\Desktop\\Maske_one\\3.1\\one\\src\\one.Tests\\one.Tests.csproj",
+      "projectUniqueName": "C:\\git\\one\\src\\one.Tests\\one.Tests.csproj",
       "projectName": "one.Tests",
-      "projectPath": "C:\\Users\\saven\\Desktop\\Maske_one\\3.1\\one\\src\\one.Tests\\one.Tests.csproj",
-      "packagesPath": "C:\\Users\\saven\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saven\\Desktop\\Maske_one\\3.1\\one\\src\\one.Tests\\obj\\",
+      "projectPath": "C:\\git\\one\\src\\one.Tests\\one.Tests.csproj",
+      "packagesPath": "C:\\Users\\maske\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\one\\src\\one.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\saven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maske\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5785,8 +5785,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\saven\\Desktop\\Maske_one\\3.1\\one\\src\\one.Shared\\one.Shared.csproj": {
-              "projectPath": "C:\\Users\\saven\\Desktop\\Maske_one\\3.1\\one\\src\\one.Shared\\one.Shared.csproj"
+            "C:\\git\\one\\src\\one.Shared\\one.Shared.csproj": {
+              "projectPath": "C:\\git\\one\\src\\one.Shared\\one.Shared.csproj"
             }
           }
         }
@@ -5814,7 +5814,7 @@
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[16.3.0, )"
+            "version": "[16.5.0-preview-20191115-01, )"
           }
         },
         "imports": [
@@ -5832,7 +5832,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview2-014569\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview3-014645\\RuntimeIdentifierGraph.json"
       }
     }
   }

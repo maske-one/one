@@ -1,8 +1,8 @@
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\bin\Debug\netstandard2.0\one.Shared.deps.json
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\bin\Debug\netstandard2.0\one.Shared.dll
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\bin\Debug\netstandard2.0\one.Shared.pdb
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.AssemblyInfoInputs.cache
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.AssemblyInfo.cs
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.dll
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.pdb
-C:\Users\saven\Desktop\Maske_one\3.1\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.csprojAssemblyReference.cache
+C:\git\one\src\one.Shared\bin\Debug\netstandard2.0\one.Shared.deps.json
+C:\git\one\src\one.Shared\bin\Debug\netstandard2.0\one.Shared.dll
+C:\git\one\src\one.Shared\bin\Debug\netstandard2.0\one.Shared.pdb
+C:\git\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.AssemblyInfoInputs.cache
+C:\git\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.AssemblyInfo.cs
+C:\git\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.dll
+C:\git\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.pdb
+C:\git\one\src\one.Shared\obj\Debug\netstandard2.0\one.Shared.csprojAssemblyReference.cache

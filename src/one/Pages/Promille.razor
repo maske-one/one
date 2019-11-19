@@ -1,23 +1,60 @@
 ﻿@page "/promille"
 @using one.Shared
 
-Weiblich? <input type="checkbox" />
-Alter: <input @bind="@calculation.Age" />
-Grösse [cm]: <input @bind="@calculation.Height" />
-Gewicht: <input @bind="@calculation.Weight" />
-Deziliter getrunken: <input @bind="@calculation.Deciliter" />
-Volumenprozent: <input @bind="@calculation.Percent" />
-Saettigung (0 bis 3): <input @bind="@calculation.Fullness" />
-<button @onclick="OnCalculate">Berechnen</button>
-<h3>Promille Alkohol: </h3>
+Maennlich   Weiblich
+<div class="sliderdiv">
+    <input type="range" min="0" max="1" class="slider" @bind="@calculationViewModel.Gender" />
+</div>
+Alter:
+<input @bind="@calculationViewModel.Age" />
+Grösse [cm]:
+<input @bind="@calculationViewModel.Height" />
+Gewicht:
+<input @bind="@calculationViewModel.Weight" />
+Deziliter getrunken:
+<input @bind="@calculationViewModel.Deciliter" />
+Volumenprozent:
+<input @bind="@calculationViewModel.Percent" />
+Nichts- bis Vollgegessen:
+<div class="sliderdiv">
+    <input type="range" min="0" max="2" class="slider" @bind="@calculationViewModel.Fullness" />
+</div>
+<h3>Promille Alkohol: @calculationViewModel.ResultText</h3>
 
+<style>
+    .sliderdiv { width: 9vw;}
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;  
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%; 
+      background: lightblue;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: lightblue;
+      cursor: pointer;
+    }
+</style>
 
 @code
 {
-    AlcoholBloodConcentrationCalculation calculation = new AlcoholBloodConcentrationCalculation(Genders.Male, 0,0,0,0,0,0);
-
-    public void OnCalculate()
-    {
-        
-    }
+    AlcoholBloodConcentrationCalculationViewModel calculationViewModel = new AlcoholBloodConcentrationCalculationViewModel(new AlcoholBloodConcentrationCalculation(Genders.Male, 20, 175, 75, 5, 5, 2));
 }

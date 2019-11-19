@@ -13,7 +13,7 @@ namespace one.Shared
         private static readonly GenderConstants FemaleGenderConstants = new GenderConstants(0.203, 0.07, 0.1069, 0.2466);
 
         public AlcoholBloodConcentrationCalculation(Genders gender, int age, double height, double weight,
-            double deciliter, double percent, int fullness)
+            double deciliter, double percent, double fullness)
         {
             Gender = gender;
             Age = age;
@@ -30,7 +30,7 @@ namespace one.Shared
         public double Weight { get; set; }
         public double Deciliter { get; set; }
         public double Percent { get; set; }
-        public int Fullness { get; set; }
+        public double Fullness { get; set; }
 
         public double Result
         {
@@ -42,7 +42,7 @@ namespace one.Shared
                                      + genderConstants.WeightHeight * Height 
                                      + genderConstants.WeightWeight * Weight;
                 var alcoholAmountGrams = DensityAlcohol * Deciliter * Percent;
-                var alcoholAbsorptionReductionFactor = Math.Pow(Math.E, StomachFillFactor * Math.Sqrt(Fullness / 3));
+                var alcoholAbsorptionReductionFactor = Math.Exp(StomachFillFactor * Math.Sqrt(Fullness));
                 return WaterInBloodFactor * alcoholAmountGrams / ( alcoholAbsorptionReductionFactor * DensityBlood * totalBodyWater);
             }
         }
