@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+
+<header id="heady">
+    @*<img class='logo' id="load" src='assets/core/logo.svg'>*@
+    <img class='logo_full' id="full" src='assets/core/maske.svg'>
+    <input type='checkbox' id='nav-toggle' class='nav-toggle'>
+    <nav id="navy">
+        <ul>
+            <li><a href='/' >Home</a></li>
+            <li><a href='/promille' >Promille</a></li>
+        </ul>
+    </nav>
+    <label for='nav-toggle' class='nav-toggle-label'>
+        <span></span>
+    </label>
+</header>
+
+<div class='content'>
+    @Body
+</div>

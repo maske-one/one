@@ -1,0 +1,47 @@
+﻿@*@page "/promille"
+
+<EjsRadioButton Name="gender" Label="Male" @onclick="genderMale"></EjsRadioButton>
+<br />
+<EjsRadioButton Name="gender" Label="Female" @onclick="genderFemale"></EjsRadioButton>
+
+@code
+{
+
+    private void genderMale()
+    {
+        calculationViewModel.Gender = Genders.Male;
+    }
+    private void genderFemale()
+    {
+        calculationViewModel.Gender = Genders.Female;
+    }
+
+}
+
+<p>Gender: @calculationViewModel.Gender</p>
+Alter:
+<EjsSlider @bind-Value="age" Min="16" Max="100" Step="1">
+    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+</EjsSlider>
+@code { int age { get; set; } = 18; }
+
+Grösse [cm]:
+<input />
+Gewicht:
+<input />
+Deziliter getrunken:
+<input />
+Volumenprozent:
+<input />
+Nichts- bis Vollgegessen:
+<EjsSlider @bind-Value="fullness" Min="0" Max="100" Step="1">
+    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicksData>
+</EjsSlider>
+@code { int fullness { get; set; } = 50; }
+
+<h3>Promille Alkohol: @calculationViewModel.ResultText</h3>
+
+@code
+{
+    AlcoholBloodConcentrationCalculationViewModel calculationViewModel = new AlcoholBloodConcentrationCalculationViewModel(new AlcoholBloodConcentrationCalculation(Genders.Male, 20, 175, 75, 5, 5, 2));
+}*@

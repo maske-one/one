@@ -1,0 +1,111 @@
+﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+
+@*///////////////////////////////////////////////////*@
+
+<EjsRadioButton Label="Credit/Debit Card" @ref="payButtonCD" @onclick="stCD" Name="payment" Value="credit/debit"></EjsRadioButton>
+<br />
+<EjsRadioButton Label="Net Banking" @ref="payButtonN" @onclick="stN" Name="payment" Value="netbanking"></EjsRadioButton>
+
+@code
+{
+    string payOption { get; set; }
+    EjsRadioButton payButtonCD;
+    EjsRadioButton payButtonN;
+
+    private void stCD() { payOption = payButtonCD.Value; }
+    private void stN() { payOption = payButtonN.Value; }
+}
+<p>Radio: @payOption</p>
+
+
+
+
+
+
+<div class="slider">
+    <EjsSlider @bind-Value="age" Min="10" Max="100" Step="1">
+        <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicksData>
+    </EjsSlider>
+</div>
+@code { int age { get; set; } = 18; }
+
+@*///////////////////////////////////////////////////*@
+@*///////////////////////////////////////////////////*@
+
+
+
+
+
+<EjsButton @ref="ToggleBtn" @onclick="onToggleClick" CssClass="e-flat" IsToggle="true" IsPrimary="true" Content="@Content"></EjsButton>
+
+@code {
+    EjsButton ToggleBtn;
+    public string Content = "Play";
+    private void onToggleClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ToggleBtn.Content == "Play")
+        {
+            this.Content = "Pause";
+        }
+        else
+        {
+            this.Content = "Play";
+        }
+    }
+}
+
+
+@*///////////////////////////////////////////////////*@
+
+
+
+
+<div class="slider">
+    <EjsTextBox @bind-Value="@Name"></EjsTextBox>
+
+    <p>TextBox value is: @Name</p>
+</div>
+
+
+@*///////////////////////////////////////////////////*@
+@*///////////////////////////////////////////////////*@
+
+
+
+@code { public string Name { get; set; } }
+
+<EditForm Model="Annotate">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <EjsCheckBox Label="Option 1" @bind-Checked="@Annotate.Check"></EjsCheckBox>
+        <ValidationMessage For="@(() => Annotate.Check)" />
+    </div>
+    <EjsButton HtmlAttributes="@Submit" Content="Submit"></EjsButton>
+</EditForm>
+
+@code {
+    public Annotation Annotate = new Annotation();
+    public class Annotation
+    {
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
+        public bool Check { get; set; }
+    }
+    public Dictionary<string, object> Submit = new Dictionary<string, object>()
+{
+        { "type", "submit"}
+    };
+}
+
+
+
+
+
+
+
+<style>
+    .slider {
+        width: 30vw;
+        height: 3em;
+    }
+</style>
