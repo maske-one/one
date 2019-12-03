@@ -1,53 +1,63 @@
 ﻿@page "/promille"
 
-<EjsRadioButton Name="gender" Label="Male" @onclick="genderMale"></EjsRadioButton>
-<br />
-<EjsRadioButton Name="gender" Label="Female" @onclick="genderFemale"></EjsRadioButton>
-
-@code
+    <div class="inputs">
+        <EjsRadioButton Name="gender" Label="Male" @onclick="genderMale"></EjsRadioButton>
+        <br />
+        <EjsRadioButton Name="gender" Label="Female" @onclick="genderFemale"></EjsRadioButton>
+                        <br />
+        @code
 {
 
-    private void genderMale()
-    {
-        calculationViewModel.Gender = Genders.Male.ToString();
-    }
-    private void genderFemale()
-    {
-        calculationViewModel.Gender = Genders.Female.ToString();
-    }
+            private void genderMale()
+            {
+                calculationViewModel.Gender = Genders.Male;
+            }
+            private void genderFemale()
+            {
+                calculationViewModel.Gender = Genders.Female;
+            }
 
-}
+        }
 
-<p>Gender: @calculationViewModel.Gender</p>
-Alter:
-<EjsSlider @bind-Value="calculationViewModel.Age" Min="16" Max="100" Step="1">
-    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
-</EjsSlider>
+        Alter:<br />
+        <EjsSlider @bind-Value="calculationViewModel.Age" Min="16" Max="100" Step="1">
+            <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+        </EjsSlider><br />
 
-Grösse [cm]:
-<EjsSlider @bind-Value="calculationViewModel.Height" Min="100" Max="210" Step="1">
-    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
-</EjsSlider>
-Gewicht:
-<EjsSlider @bind-Value="calculationViewModel.Weight" Min="40" Max="140" Step="1">
-    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
-</EjsSlider>
-Deziliter getrunken:
-<EjsSlider @bind-Value="calculationViewModel.Deciliter" Min="1" Max="50" Step="1">
-    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
-</EjsSlider>
-Volumenprozent:
-<EjsSlider @bind-Value="calculationViewModel.Percent" Min="1" Max="90" Step="1">
-    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
-</EjsSlider>
-Nichts- bis Vollgegessen:
-<EjsSlider @bind-Value="calculationViewModel.Fullness" Min="0" Max="100" Step="1">
-    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicksData>
-</EjsSlider>
+        Grösse [cm]:<br />
+        <EjsSlider @bind-Value="calculationViewModel.Height" Min="100" Max="210" Step="1">
+            <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+        </EjsSlider><br />
+        Gewicht:<br />
+        <EjsSlider @bind-Value="calculationViewModel.Weight" Min="40" Max="140" Step="1">
+            <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+        </EjsSlider><br />
+        Deziliter getrunken:<br />
+        <EjsSlider @bind-Value="calculationViewModel.Deciliter" Min="1" Max="50" Step="1">
+            <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+        </EjsSlider><br />
+        Volumenprozent:<br />
+        <EjsSlider @bind-Value="calculationViewModel.Percent" Min="1" Max="90" Step="1">
+            <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+        </EjsSlider><br />
+        Nichts- bis Vollgegessen:<br />
+        <EjsSlider @bind-Value="calculationViewModel.Fullness" Min="0" Max="100" Step="1">
+            <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicksData>
+        </EjsSlider><br />
+    </div>
 
 <h3>Promille Alkohol: @calculationViewModel.ResultText</h3>
 
 @code
 {
-    AlcoholBloodConcentrationCalculationViewModel calculationViewModel = new AlcoholBloodConcentrationCalculationViewModel(new AlcoholBloodConcentrationCalculation(Genders.Male, 20, 175, 75, 5, 5, 2));
+    AlcoholBloodConcentrationCalculationViewModel calculationViewModel = new AlcoholBloodConcentrationCalculationViewModel(new AlcoholBloodConcentrationCalculation(Genders.Male, 20, 175, 75, 5, 5, 50));
 }
+
+<style>
+    .inputs {
+        width: 25vw;
+        margin-top: 2em;
+        top: 1em;
+        padding-top: 2em;
+    }
+</style>
