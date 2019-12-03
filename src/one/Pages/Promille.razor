@@ -1,4 +1,4 @@
-﻿@*@page "/promille"
+﻿@page "/promille"
 
 <EjsRadioButton Name="gender" Label="Male" @onclick="genderMale"></EjsRadioButton>
 <br />
@@ -9,11 +9,11 @@
 
     private void genderMale()
     {
-        calculationViewModel.Gender = Genders.Male;
+        calculationViewModel.Gender = Genders.Male.ToString();
     }
     private void genderFemale()
     {
-        calculationViewModel.Gender = Genders.Female;
+        calculationViewModel.Gender = Genders.Female.ToString();
     }
 
 }
@@ -44,4 +44,4 @@ Nichts- bis Vollgegessen:
 @code
 {
     AlcoholBloodConcentrationCalculationViewModel calculationViewModel = new AlcoholBloodConcentrationCalculationViewModel(new AlcoholBloodConcentrationCalculation(Genders.Male, 20, 175, 75, 5, 5, 2));
-}*@
+}
