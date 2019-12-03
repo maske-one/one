@@ -20,24 +20,30 @@
 
 <p>Gender: @calculationViewModel.Gender</p>
 Alter:
-<EjsSlider @bind-Value="age" Min="16" Max="100" Step="1">
+<EjsSlider @bind-Value="calculationViewModel.Age" Min="16" Max="100" Step="1">
     <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
 </EjsSlider>
-@code { int age { get; set; } = 18; }
 
 Grösse [cm]:
-<input />
+<EjsSlider @bind-Value="calculationViewModel.Height" Min="100" Max="210" Step="1">
+    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+</EjsSlider>
 Gewicht:
-<input />
+<EjsSlider @bind-Value="calculationViewModel.Weight" Min="40" Max="140" Step="1">
+    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+</EjsSlider>
 Deziliter getrunken:
-<input />
+<EjsSlider @bind-Value="calculationViewModel.Deciliter" Min="1" Max="50" Step="1">
+    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+</EjsSlider>
 Volumenprozent:
-<input />
+<EjsSlider @bind-Value="calculationViewModel.Percent" Min="1" Max="90" Step="1">
+    <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="10" SmallStep="5"></SliderTicksData>
+</EjsSlider>
 Nichts- bis Vollgegessen:
-<EjsSlider @bind-Value="fullness" Min="0" Max="100" Step="1">
+<EjsSlider @bind-Value="calculationViewModel.Fullness" Min="0" Max="100" Step="1">
     <SliderTicksData Placement="Placement.After" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicksData>
 </EjsSlider>
-@code { int fullness { get; set; } = 50; }
 
 <h3>Promille Alkohol: @calculationViewModel.ResultText</h3>
 
