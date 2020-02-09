@@ -1,0 +1,62 @@
+﻿[
+  {
+    "latitude": 47.41,
+    "longitude": 7.51,
+    "name": "Sack 1",
+    "fullness": "10%"
+  },
+  {
+    "latitude": 47.42,
+    "longitude": 7.52,
+    "name": "Sack 2",
+    "fullness": "40%"
+  },
+  {
+    "latitude": 47.43,
+    "longitude": 7.53,
+    "name": "Sack 3",
+    "fullness": "30%"
+  },
+  {
+    "latitude": 47.44,
+    "longitude": 7.54,
+    "name": "Sack 4",
+    "fullness": "0%"
+  },
+  {
+    "latitude": 47.45,
+    "longitude": 7.55,
+    "name": "Sack 5",
+    "fullness": "10%"
+  },
+  {
+    "latitude": 47.46,
+    "longitude": 7.56,
+    "name": "Sack 6",
+    "fullness": "10%"
+  },
+  {
+    "latitude": 47.47,
+    "longitude": 7.57,
+    "name": "Sack 7",
+    "fullness": "70%"
+  },
+  {
+    "latitude": 47.48,
+    "longitude": 7.58,
+    "name": "Sack 8",
+    "fullness": "90%"
+  },
+  {
+    "latitude": 47.49,
+    "longitude": 7.59,
+    "name": "Sack 9",
+    "fullness": "5%"
+  },
+  {
+    "latitude": 47.50,
+    "longitude": 7.60,
+    "name": "Sack 10",
+    "fullness": "20%"
+  }
+]
