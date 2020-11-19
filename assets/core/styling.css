@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+    --background: rgba(0, 155, 255, .85);
+    --headerheight: 3em;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Animations */
+
+@keyframes move {
+    0% {
+        top: 50vh;
+    }
+
+    100% {
+        top: 1vh;
+    }
+}
+
+.logo_full {
+    height: var(--headerheight);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    animation: move ease-in-out 200ms;
+    height: var(--headerheight);
+    position: relative;
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+header {
+    background: var(--background);
+    animation: open 300ms ease-out 225ms;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    display: grid;
+    animation: appear 500ms ease-in 250ms;
+    padding: var(--headerheight) +1vh;
+    background: white;
+    background-size: cover;
+    place-items: center;
+}
+
+/* General Styling */
+
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Navigation Styling */
+
+.nav-toggle {
+    display: none;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(0, 100, 255, .75);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 4px;
+    width: 2em;
+    border-radius: 10px;
+    position: relative;
+}
+
+ .nav-toggle-label span::before,
+ .nav-toggle-label span::after {
+     content: '';
+     position: absolute;
+ }
+
+ .nav-toggle-label span::before {
+     bottom: 10px;
+ }
+
+ .nav-toggle-label span::after {
+     top: 10px;
+ }
+
+nav {
+    display: ;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 150ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 50ms ease-in-out;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 100ms ease-in-out 125ms;
+}
+
+/* Page Specific Styling */
+
+input {
+    width: 5em;
+}
+
+.inputs {
+    position: relative;
+    text-align: left;
+}
+
+.solutions {
+    height: auto;
+    text-align: left;
+}
+
+.helpcheck {
+    display: none;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
