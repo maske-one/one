@@ -1,0 +1,36 @@
+.logo {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+@keyframes hideshow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.logo {
+    animation: hideshow 3s ease infinite, rotation 1s ease infinite;
+}
+/*
+@keyframes bgcircle {
+    0% { background: radial-gradient(circle, white, rgba(0,142,255,1)); }
+    25% { background: radial-gradient(circle, white, rgba(0,142,255,0.5)); }
+    50% { background: white; }
+    75% { background: radial-gradient(circle, rgba(0, 142, 255, 0.5), white); }
+    100% { background: radial-gradient(circle, rgba(0, 142, 255, 1), white); }
+    }
+}
+
+body {
+  animation: bgcircle 3s ease infinite;
+}*/

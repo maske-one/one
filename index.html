@@ -1,52 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
-
 <head>
-    <script src="assets/gtag.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="stylesheet" href="assets/project_files/loading.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/project_files/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/project_files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/project_files/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="mask-icon" href="assets/project_files/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/project_files/favicon.ico">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="apple-mobile-web-app-title" content="Lebensraum Birs">
-    <meta name="application-name" content="Lebensraum Birs">
+    <meta name="apple-mobile-web-app-title" content="Maske one">
+    <meta name="application-name" content="Maske one">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
-    <base href="/" />
-    <link href="styling.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/17.4.47/material.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/ej2/17.4.47/dist/ej2.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/17.4.47/dist/ejs.interop.min.js"></script>
+	
+	<script>if ('serviceWorker' in navigator) { window.onload = function() { navigator.serviceWorker.register('serviceWorker.js'); }; }</script>
+    <meta name="google-site-verification" content="pLEp2OGEddTJMwkBwmo-yS3RusexqBokhqim6VYO3EI" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145492068-1"></script>
     <script>
-        function readfile() {
-            var rawFile = new XMLHttpRequest();
-            rawFile.open("GET", "./sacke.txt", false);
-            rawFile.onreadystatechange = function () {
-                if (rawFile.readyState === 4) {
-                    if (rawFile.status === 200 || rawFile.status == 0) {
-                        var allText = rawFile.responseText;
-                        alert(allText);
-                    }
-                }
-            }
-            rawFile.send(null);
-            return allText;
-        };
-        function closewarn() {
-            document.getElementById('closebutton').click();
-        };
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-145492068-1');
+        function changeStyle() { document.querySelector("head > link:nth-child(1)").outerHTML = '<link rel="stylesheet" href="assets/project_files/styling.css">'; }
+        function unchecknav() { document.getElementById("nav-toggle").checked = false; }
     </script>
-    <script src="blazorSWRegister.js"></script>
+    <noscript><link rel="stylesheet" href="assets/project_files/styling.css"></noscript>
 </head>
-
-    <body oncontextmenu="return false;" id="bod">
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZZ2D8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-        <app>Seite lädt...</app>
+<body oncontextmenu="return false;">
+    <app><img class='logo' src='assets/project_files/logo.svg'></app>
     <script src="_framework/blazor.webassembly.js"></script>
-    </body>
-
+</body>
 </html>
